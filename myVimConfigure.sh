@@ -4,6 +4,7 @@ libcairo2-dev python-dev \
 python3-dev git \
 checkinstall
 
+cp ./vimrc ~/.vimrc
 cd /usr && sudo git clone https://github.com/vim/vim.git && cd vim  
 
 sudo ./configure --with-features=huge \
@@ -20,7 +21,6 @@ sudo make VIMRUNTIMEDIR=/usr/local/share/vim/vim81
 
 cd /usr/vim && sudo checkinstall
 
-cp vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
