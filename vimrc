@@ -27,7 +27,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Yggdroot/indentLine'
-
+Plugin 'mattn/emmet-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 call glaive#Install()        " enable this line after the installation of glaive
@@ -86,8 +86,6 @@ Glaive codefmt clang_format_style='google'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-map <silent> <F5> : NERDTreeToggle<CR>
-
 " setup for gruvbox
 set t_Co=256
 set background=dark
@@ -114,3 +112,8 @@ nmap <F8> :TagbarToggle<CR>
 let g:indentLine_char = '│'
 set tags=./tags,tags;$HOME
 "source ~/cscope_maps.vim
+
+" Press F3 to toggle highlighting on/off, and show current value.
+noremap <F3> :set hlsearch! hlsearch?<CR>
+map <F2> i<CR><ESC>
+map <silent> <F5> : NERDTreeToggle<CR>

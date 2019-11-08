@@ -5,6 +5,7 @@ python3-dev git \
 checkinstall
 
 cp ./vimrc ~/.vimrc
+cp ./tmux.conf ~/.tmux.conf
 cd /usr && sudo git clone https://github.com/vim/vim.git && cd vim  
 
 sudo ./configure --with-features=huge \
